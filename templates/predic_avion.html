@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="avion.css"/>
+		<title> Prédiction retard vol aérien </title>
+	</head>
+	
+	<body>
+		<header>
+			<h1> Entrez les informations relatives au vol désiré </h1>
+				<fieldset>
+					<form action="." method="POST">
+										
+						<label for="depart">Entrez la ville de départ : </label>
+						<input type="text" name="depart" id="depart" autofocus />
+						
+						<label for="arrivee"> Entrez la ville d'arrivée : </label>
+						<input type="text" name="arrivee" id="arrivee" required />
+						
+						<label for="jour"> Entrez le jour du départ: </label>
+						<input type="text" id="jour"/>
+					
+						<label for "mois"> Entrez le mois de départ: </label>
+						<input type="text" name="mois" id="mois"/>
+						
+						<label for "joursem"> Entrez le jour de la semaine : </label>
+						<input type="text" name="joursemaine" id="joursem"/>
+						
+					</fieldset>
+					
+					<button type="submit">Envoyer</button>
+				</form> 
+		</header>
+		
+		<section>
+			<h2> Voici les résultats des prévisions : </h2>
+				<p> Vous pouvez prévoir un retard de : {{ retard}} minutes </p>
+				
+		</section>
+
+
+
+
+
+</html>

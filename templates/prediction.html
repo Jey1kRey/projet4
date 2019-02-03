@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='avion.css')}}"/>
+		<title> Prédiction retard vol aérien </title>
+	</head>
+	
+	<body>
+		<section>
+			<h1> Entrez les informations relatives au vol désiré </h1>
+				<fieldset>
+					<form action="." method="POST">
+						
+						<ul>						
+							<li><label for="ville_depart">Entrez la ville de départ ( ex: New York, NY): </label></li>
+							<input type="text" name="text" id="ville_depart"/>
+						
+							<li><label for="ville_arrivee"> Entrez la ville d'arrivée ( ex : Los Angeles, CA): </label></li>
+							<input type="text" name="arrivee" id="ville_arrivee"/>
+						
+							<li><label for="jour_depart"> Entrez le jour du départ: </label></li>
+							<input type="text" name="jour" id="jour_depart"/>
+					
+							<li><label for "mois_depart"> Entrez le mois de départ ( sous forme numérique, ex : 1 pour Janvier): </label></li>
+							<input type="text" name="mois" id="mois_depart"/>
+						
+							<li><label for "horaire_depart"> Entrez l'heure de départ ( inscrire l'heure sous cette forme : par exemple 12h00->1200): </label></li>
+							<input type="text" name="horaire" id="horaire_depart"/>
+							
+							<li><label for "compagnie"> Entrez les lettres de la compagnie aérienne ( ex: AA ): </label></li>
+							<input type="text" name="compagnie" id="compagnie"/>
+						</ul>
+						
+					</fieldset>
+					
+					<button type="submit">Prediction</button>
+				</form> 
+		</section>
+		
+		<section>
+			<h2> Voici les résultats des prévisions : </h2>
+				<p> Le vol le plus proche de votre choix partira le {{ jour_mois}} à {{ heure_depart}}
+				<p> Vous pouvez prévoir un retard à l'arrivée de : {{retard}} minutes </p>
+				
+		</section>
+
+
+
+
+
+</html>
